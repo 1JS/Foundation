@@ -17,8 +17,9 @@ The value of this, passed to all functions, is based on the **context** in which
 ### Examples
 
 ---
-// 'this' in jQuery
+// 'this' in jQuery.
 // code(tested) from: Jeffrey Way - 30 Days to Learn jQuery - 9.The-this-keyword
+
 Since every jQuery selector, say $('.class'), is actually an instance of jQuery object, so…
 ```html
 <a href="tutsplus.com">Click Me!</a>```
@@ -78,7 +79,7 @@ $('a').on( 'click', $.proxy(obj.doIt, obj) );
 // code(tested) from: John Resig@jQuery - Secrets of the JavaScript Ninja
 ```html
 <button id="test">Click Me!</button>``````javascriptvar button = {	clicked: false,	click: function(){
-		console.log(this); // 'this' is: <button id="test">Click Me!</button>		this.clicked = true;	}};var elem = document.getElementById("test");elem.addEventListener("click",button.click,false); // the event handling system of the browser defines the context of the invocation to be the target element of the event, which causes the context to be the <button> element, not the button object.
+		console.log(this); // 'this' is: <button id="test">Click Me!</button>, not the 'button' object		this.clicked = true;	}};var elem = document.getElementById("test");elem.addEventListener("click",button.click,false); // the event handling system of the browser defines the context of the invocation to be the target element of the event, which causes the context to be the <button> element, not the button object.
 ```
 ---
  
