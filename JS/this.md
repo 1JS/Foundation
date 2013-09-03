@@ -1,5 +1,6 @@
 # This
 
+
 ## Reference
 - Books
 	- Cody Lindley - JavaScript Enlightenment - 6. The this Keyword
@@ -86,6 +87,8 @@ $('a').on( 'click', $.proxy(obj.doIt, obj) );
  
 ---
 // Code from: "Cody Lindley - JavaScript Enlightenment"
+
+Use as constructor
 ```javascriptvar Person = function(name) {	this.name = name || 'john doe'; // this will refer to the instance created}var cody = new Person('Cody Lindley'); /* create an instance, based on Person constructor */console.log(cody.name); // logs 'Cody Lindley'
 ```
 
@@ -94,5 +97,25 @@ $('a').on( 'click', $.proxy(obj.doIt, obj) );
 ```javascript
 var Person = function(name) {	this.name = name || 'john doe';}var cody = Person('Cody Lindley'); // notice we did not use 'new'console.log(cody.name); // undefined, the value is actually set at window.name
 console.log(window.name); // logs 'Cody Lindley'
+```
+---
+---
+// code from: David Herman@Mozilla - Effective JavaScript
+
+Invocation as a method
+```javascript
+var obj = {
+	hello: function() {
+		return "hello, " + this.username;
+	},
+	username: "Hans Gruber"
+};
+obj.hello(); // "hello, Hans Gruber", here 'this' is refer to the obj
+
+var obj2 = {
+	hello: obj.hello,
+	username: "Boo Radley"
+};
+obj2.hello(); // "hello, Boo Radley, here 'this' is refer to obj2
 ```
 ---
