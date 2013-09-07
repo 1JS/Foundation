@@ -3,7 +3,12 @@ Foundation
 
 Build Solid Foundation as a front end developer
 
-- CSS layout
+
+CSS
+- layout
+- Responsive
+
+JS
 - JS Function, closure, prototype,  + Real world practice
 - JS Object-oriented + Real world practice
 - Node.js, Express.js

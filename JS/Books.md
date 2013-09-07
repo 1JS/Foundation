@@ -49,3 +49,8 @@
 - Brad Green@Google - AngularJS
 
 	The comments about this book on [amazon](http://www.amazon.com/dp/1449344852) is not good, lots of examples didn't work. Yet I think it's still good to use it as an intro book.
+
+---
+
+### NodeJS
+- Pedro Teixeir - Professional Node.js
